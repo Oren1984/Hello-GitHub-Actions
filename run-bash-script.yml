@@ -1,13 +1,16 @@
-name: Run Bash Script
+name: Run Bash and Python scripts
 
 on: [push]
 
 jobs:
-  run-script:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
 
-      - name: Run show-date script
-        run: bash ./scripts/show-date.sh
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run Bash script to show date/time in Israel
+      run: bash ./scripts/show-date.sh
+
+    - name: Run Python script to check palindrome
+      run: python3 ./scripts/check_palindrome.py
