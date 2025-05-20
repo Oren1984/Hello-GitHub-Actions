@@ -1,0 +1,14 @@
+name: My Second Action
+
+on: push
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Print Hello World
+        run: echo "Hello, GitHub Actions!"
+      - name: List files in the repo
+        run: ls -la
