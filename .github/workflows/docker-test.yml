@@ -1,0 +1,20 @@
+name: Docker Test
+
+on:
+  push:
+    paths:
+      - .github/workflows/docker-test.yml
+
+jobs:
+  docker-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
+        run: echo "Hello World"
+
+      - name: Run Docker version
+        run: docker -v
