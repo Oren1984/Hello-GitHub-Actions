@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# הגדרת אזור זמן לישראל
+export TZ="Asia/Jerusalem"
+
+# הצגת התאריך והשעה
+date
+

@@ -1,0 +1,14 @@
+name: Run Bash Script Example
+
+on: push
+
+jobs:
+  run-bash-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run bash script to show Israel date/time
+        run: bash ./scripts/show-date.sh
